@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'MiSans-Thin'; /* 重命名字体名 */
+  src: url('MiSans-Thin.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MiSans-Extralight'; /* 重命名字体名 */
+  src: url('MiSans-ExtraLight.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MiSans-Light'; /* 重命名字体名 */
+  src: url('MiSans-Light.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MiSans-Normal'; /* 重命名字体名 */
+  src: url('MiSans-Normal.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MiSans-Regular'; /* 重命名字体名 */
+  src: url('MiSans-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MiSans-Medium'; /* 重命名字体名 */
+  src: url('MiSans-Medium.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MiSans-Semibold'; /* 重命名字体名 */
+  src: url('MiSans-Semibold.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MiSans-Demibold'; /* 重命名字体名 */
+  src: url('MiSans-Demibold.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MiSans-Bold'; /* 重命名字体名 */
+  src: url('MiSans-Bold.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MiSans-Heavy'; /* 重命名字体名 */
+  src: url('MiSans-Heavy.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
