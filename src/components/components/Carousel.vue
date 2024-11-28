@@ -1,7 +1,7 @@
 <template>
     <div class="container-carousel">
         <el-carousel  :interval="3000"  height="360px">
-            <el-carousel-item v-for="(item,index) in bannerActivityList" :key="item.id">
+            <el-carousel-item v-for="(item,index) in bannerActivityList" :key="item.id" @click="toDetail(item)">
                 <img :src="item.banner.replace('/','/file/')" class="image">
             </el-carousel-item>
         </el-carousel>
@@ -9,7 +9,13 @@
 </template>
 
 <script setup name="Carousel">
+import { useRouter} from "vue-router";
+
 defineProps(['bannerActivityList'])
+const router=useRouter()
+function toDetail(item){
+  router.push(`/activity-detail/${item.id}`)
+}
 
 </script>
 
@@ -41,6 +47,7 @@ defineProps(['bannerActivityList'])
     height: 100%;
     object-fit: cover;
     object-position: center;
+    cursor:pointer;
 }
 
 </style>

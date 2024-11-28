@@ -4,7 +4,7 @@
       推荐活动
     </div>
     <ul class="container-card">
-      <li class="card" v-for="(item, index) in formattedActivities" :key="item.id">
+      <li class="card" v-for="(item, index) in formattedActivities" :key="item.id" @click="toDetail(item.id)">
         <img :src="item.formattedCover" />
         <div class="text-title">{{ item.title }}</div>
         <div class="container-region-date">
@@ -18,9 +18,10 @@
 
 <script setup name="ActivityCard">
 import {computed, toRaw} from 'vue';
+import {useRouter} from "vue-router";
 
 const props = defineProps(['recommendActivityList']);
-
+const router=useRouter()
 // 计算属性: 格式化活动列表中的每一项
 const formattedActivities = computed(() => {
   return props.recommendActivityList.map(item => ({
@@ -29,11 +30,16 @@ const formattedActivities = computed(() => {
     formattedCover: item.cover.replace('/', '/file/'),
 
     formattedRegion: item.regions.slice(0, 2).map(region => region.regionName).join('、') + (item.regions.length > 2 ? '...' : ''),
-    
+
     // 格式化日期为 "MM.DD - MM.DD"
     formattedDate: item.begin.replace(/-/g, '.').slice(5) + '-' + item.end.replace(/-/g, '.').slice(5)
   }));
 });
+
+function toDetail(itemId){
+  router.push(`/activity-detail/${itemId}`);
+}
+
 </script>
 
 
@@ -48,6 +54,7 @@ const formattedActivities = computed(() => {
     margin-top: 20px;
 }
 .card{
+    cursor:pointer;
     display: inline-block;
     text-decoration: none;
     width: 320px;
@@ -76,20 +83,19 @@ const formattedActivities = computed(() => {
 .container-region-date{
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
+  font-size: 16px;
 }
 
 .text-region{
-    max-width: 296px;
+    max-width: 300px;
     margin-left: 12px;
-    font-size: 15px;
     color: #ababab;
-    font-weight:normal;
 }
 
 .text-date{
-    max-width:90px;
+    max-width:100px;
     margin-right: 12px;
-    font-size: 15px;
     line-height: 16px;
     color: #ababab;
     font-weight:normal;

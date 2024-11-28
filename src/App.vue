@@ -12,7 +12,9 @@ export default {
 </script>
 
 <style>
-
+/**{
+  scrollbar-gutter: stable;
+}*/
 
 </style>
   

@@ -1,5 +1,5 @@
 <template>
-    <div class="container"> 
+    <div class="container-main"> 
         <div class="container-bottom">
             <div style="display: flex;flex-direction: row;align-items: center;">
                 <img src="../../assets/svg/logo-text.svg">
@@ -20,14 +20,12 @@
     </div>
 </template>
 
-<script>
-export default {
-    
-}
+<script setup name="Bottom">
+
 </script>
 
 <style scoped>
-.container{
+.container-main{
     width: 100%;
     height: 350px;
     background-color: white;
